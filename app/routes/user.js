@@ -68,10 +68,12 @@ router.post("/signin", async (req, res) => {
     res.status(400).json({ message: err.message });
   }
 });
-router.patch("/:id", [getUser, verifyToken], async (req, res) => {
-  if (req.params.id != req.userId) {
-    return res.status(401).send({ message: "Unauthorized!" });
-  }
+router.patch("/:id", [getUser], async (req, res) => {
+  // if (req.params.id != req.userId) {
+  //   return res.status(401).send({ message: "Unauthorized!" });
+  // }
+  const salt = await bcrypt.genSalt();
+  const hashedPassword = await bcrypt.hash(req.body.password, salt);
   if (req.body.name != null) {
     res.user.name = req.body.name;
   }
@@ -79,7 +81,7 @@ router.patch("/:id", [getUser, verifyToken], async (req, res) => {
     res.user.email = req.body.email;
   }
   if (req.body.password != null) {
-    res.user.password = req.body.password;
+    res.user.password = hashedPassword;
   }
   if (req.body.createdDate != null) {
     res.user.createdDate = req.body.createdDate;

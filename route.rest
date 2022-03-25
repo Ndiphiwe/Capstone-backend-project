@@ -1,4 +1,4 @@
-GET http://localhost:3700/blogs/
+GET http://localhost:3700/users/
 
 ###
 
@@ -20,12 +20,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWNjMWIwN
 ###
 
 
-PATCH http://localhost:3700/blogs/623afe9a1929e85464a66215
+PATCH http://localhost:3700/users/62331175483a846418df78a3
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWNjMWIwNDFjOTgwMGY5NTk1Zjg5YSIsImlhdCI6MTY0NjEzNTUzMiwiZXhwIjoxNjQ2MjIxOTMyfQ.okajbq1_tY-e6pUr1wlBO1_SLZSYP3bw7UurO2SMGWQ
 
 {
-    "author": "me"
+    "name": "funguy",
+    "email": "funguy@funguy.com",
+    "password": "1234abcd"
 }
 
 
