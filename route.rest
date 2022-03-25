@@ -25,9 +25,9 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWNjMWIwNDFjOTgwMGY5NTk1Zjg5YSIsImlhdCI6MTY0NjEzNTUzMiwiZXhwIjoxNjQ2MjIxOTMyfQ.okajbq1_tY-e6pUr1wlBO1_SLZSYP3bw7UurO2SMGWQ
 
 {
-    "name": "funguy",
+    "name": "mr funguy",
     "email": "funguy@funguy.com",
-    "password": "1234abcd"
+    "password": "123456789"
 }
 
 
